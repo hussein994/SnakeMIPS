@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25780\viewh4360\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+Fonction majDirection:\
+\
+Cette fonction consiste de filtrer tous les error possibles de d\'e9placement dans la grille.\
+Dans la memoir on a l\'92adresse snakeDir qui contient les valeur de mouvement du snake,\
+Il est indiquer que la valeur 0 change la direction du snake vers le haut , 1 vers la droite , 2 vers le bas , 3 vers la gauche 
+\f1\b \ul et 4 renvoie une error dans le programme. \
+
+\f0\b0 \ulnone On a donc mit les conditions n\'e9cessaire pour filtrer chaque error possible pour bien respecter les r\'e8gles du jeux. Le label endMajDir nous permet de sortir de la fonction, donc a chaque condition passer comme True le programme ce renvoie vers la sortie de la fonction ce qui n\'92affecte pas le output du programme donc comme ci on rien fait. \
+Les r\'e8gles de la Fonction:\
+- Pour changer de directionnel seule condition est prise en compte, c\'92est quand on decide de se diriger vers coter inverse de notre direction actuel. Donc supposons snakeDir vaut 1 (Right) si on veut se diriger vers. La gauche on peut pas entrer la valeur 3 (left),  on doit faire un aller retour donc faire une transition des deux autres valeurs qu\'92on as pour se trouver dans la valeur finale qu\'92on veut -> 1(Right) -> 2(down) or 0(Up) -> 3(left). \
+Si les conditions sont Fausse donc on renvoie la valeur de $a0 vers l\'92adresse memoir snakeDir.\
+}
